@@ -218,6 +218,31 @@ public class WestminsterEnrollmentManager implements EnrollmentManager{
         UniversityTableGUI table = new UniversityTableGUI(personList);
         table.setVisible(true);
     }
+
+    @Override
+    public void listHighLoadStudents() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the minimum number of modules enrolled: ");
+        int minModulesEnrolled = s.nextInt();
+
+        boolean found = false;
+        for (Person p : personList) {
+            if(p instanceof Student){
+                Student student = (Student) p;
+                // Letting the compiler know that I'm pretty sure that the p is a Student
+
+                if (student.getModulesEnrolled() >= minModulesEnrolled){
+                    System.out.println(student.getName() + " " + student.getSurname());
+                    System.out.println(student.getCourseTitle());
+                    System.out.println(student.getModulesEnrolled());
+                    found = true;
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("No high-load Students found.");
+        }
+    }
     
 }
 
