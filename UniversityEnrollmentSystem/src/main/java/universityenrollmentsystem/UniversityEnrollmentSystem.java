@@ -6,11 +6,11 @@ package universityenrollmentsystem;
 
 /**** ENTER HERE YOUR DETAILS:*******
          * 
-         * FIRST NAME:
+         * FIRST NAME: Vishal
          * 
-         * LAST NAME:
+         * LAST NAME: Sudasinghe
          * 
-         * STUDENT ID:
+         * STUDENT ID: 20240036/ w2119833
          * 
          */
 
