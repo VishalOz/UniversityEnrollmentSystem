@@ -243,6 +243,12 @@ public class WestminsterEnrollmentManager implements EnrollmentManager{
             System.out.println("No high-load Students found.");
         }
     }
+
+    public String printListSortedByRoleAndName() {
+        ArrayList<Person> copiedPersonList = new ArrayList<>(personList);
+        Collections.sort(copiedPersonList, new RoleComparator());
+        return (Arrays.toString(copiedPersonList.toArray()));
+    }
     
 }
 
